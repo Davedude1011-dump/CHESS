@@ -1,3 +1,14 @@
+function picsOffStart() {
+    const element1 = document.getElementById("img1")
+    const element2 = document.getElementById("img2")
+    element1.remove();
+    element2.remove();
+}
+function picsOff() {
+    
+    setTimeout(picsOffStart(), 1000)
+}
+
 function A1() {
     if (document.getElementById("A1text").innerHTML === " ") {
         document.getElementById("A1text").innerHTML = document.getElementById("card").innerHTML
