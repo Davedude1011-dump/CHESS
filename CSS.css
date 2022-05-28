@@ -1,0 +1,24 @@
+body {
+    height: 2000px;
+    background-image: linear-gradient(rgb(0, 221, 255),rgb(0, 128, 255));
+}
+
+.chessboard {
+  border-radius: 10px;
+}
+
+.chessboard TD {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.black {
+  background-color: #853300;
+}
+
+.white {
+  background-color: #ffa53d;
+}
