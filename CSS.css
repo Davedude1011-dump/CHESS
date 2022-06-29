@@ -1,35 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
     height: 2000px;
     background-image: linear-gradient(rgb(0, 221, 255),rgb(0, 128, 255));
 }
+.outerBoard {
+    border: 5px solid black;
+    height: 900px;
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    background-color: rgb(160, 160, 160);
+  }
+@media  screen and (max-width: 1385px) {
+  .outerBoard {
+    border: 5px solid black;
+    height: 900px;
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    border-radius: 30px;
+    background-color: rgb(160, 160, 160);
+  }
+}
+@media  screen and (max-width: 1200px) {
+  .outerBoard {
+    border: 5px solid black;
+    height: 900px;
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+    border-radius: 30px;
+    background-color: rgb(160, 160, 160);
+  }
+}
 
 .chessboard {
-  border-radius: 10px;
-  top: 8%
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.outerBoard {
-  border: 5px solid black;
-  height: 900px;
-  width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 30px;
-  background-color: rgb(160, 160, 160);
-}
-
-.chessboard TD {
+td {
   width: 80px;
   height: 80px;
   padding: 5px;
   text-align: center;
   font-size: 30px;
+  border: none;
+  cursor: pointer;
 }
 
 .black {
-  background-color: #853300;
+  background-color: hsl(23, 100%, 26%);
+}
+.black:hover {
+  background-color: hsl(23, 100%, 16%);
+}
+ 
+.white {
+  background-color: hsl(32, 100%, 62%);
+}
+.white:hover {
+  background-color: hsl(32, 100%, 52%);
 }
 
-.white {
-  background-color: #ffa53d;
+.clockOuter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1%;
+  height: 900px;
+  width: 15%;
+  background-color: rgb(160, 160, 160);
+  border: 5px solid black;
+  border-radius: 30px;
+}
+.clockButtonTop {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 20%;
+  width: 95%;
+  margin-top: 2px;
+  background-color: rgb(212, 212, 212);
+  border: 4px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.clockButtonTop:hover {
+  background-color: rgb(169, 169, 169);
+}
+.clockButtonBottom {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 20%;
+  width: 95%;
+  bottom: 0;
+  margin-bottom: 2px;
+  background-color: rgb(212, 212, 212);
+  border: 4px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.clockButtonBottom:hover {
+  background-color: rgb(169, 169, 169);
+}
+.clockTimeOuter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 95%;
+  margin-bottom: 2px;
+  background-color: rgb(212, 212, 212);
+  border: 4px solid black;
+  border-radius: 30px;
+}
+.clockNumTop {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 50px;
+  top: 5%
+}
+.clockNumBottom {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 50px;
+  bottom: 5%
 }

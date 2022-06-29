@@ -1,0 +1,26 @@
+body {
+    background-color: #FFFFAA;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 50px 50px;
+    font-size: 1000%;
+  }
+  #player1clock {
+    color: #000088;
+    float: left;
+  }
+  #player2clock {
+    color: #005500;
+    float: right;
+  }
+  .now_playing {
+    border-bottom: .2em solid #aa0000;
+  }
+  #info {
+    font-size: 80%;
+    color: #AA0000;
+    text-align: center;
+    width: 100%;
+  }
+  .hidden {
+    visibility: hidden;
+  }

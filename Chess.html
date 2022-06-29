@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html class="press 'l' to start">
   <head>
     <title>Chess :)</title>
     <link rel="stylesheet" href="CSS.css" />
-    <script src="JS.js"></script>
+    <script src="CHESS.js"></script>
+    <script src="Counter.js"></script>
   </head>
-  <body>
-    <img
-      id="img1"
-      style="position: absolute; left: 12%"
-      src="images\StockFish-removebg-preview.png"
-    />
-    <img
-      id="img2"
-      style="position: absolute; left: 67%; top: 60%"
-      src="images\phpveiDNF-removebg-preview.png"
-    />
+  <body onkeypress='game.keypress(event)' onload='createGame()'>
+
     <div id="card"></div>
     <div id="click">fin</div>
     <div class="outerBoard">
@@ -266,6 +258,21 @@
           </td>
         </tr>
       </table>
+    </div>
+    <div class="clockOuter">
+      <div class="clockButtonTop" onclick="l()">
+
+      </div>
+
+      <div class="clockTimeOuter">
+        <div id='info' class='hidden'>-</div>
+        <b class="clockNumTop"><div id='player1clock'>0</div></b>
+        <b class="clockNumBottom"><div id='player2clock'>0</div></b>
+      </div>
+
+      <input class="clockButtonBottom">
+        
+    </input>
     </div>
   </body>
 </html>
